@@ -1,11 +1,11 @@
 {
-  "name": "projeto-final-node",
+  "name": "fetch-crypto-data",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node build/index.js"
+    "start": "node build/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,10 @@
     "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.30.0",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.1"
   }
 }
