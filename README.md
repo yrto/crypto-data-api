@@ -1,16 +1,26 @@
 # Fetch Crypto Data
 
-Small **Node.js** and **TypeScript** project that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a MongoDB database. This project is using:
+Small **Node.js** and **TypeScript** project that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a Mongo database. This project is using:
 
 ```
 - axios
-- momment
+- moment
 - mongoose
 ```
 
-And return a formated object:
+**TypeScript** is set to use the custom `CryptoData` type:
 
-```javascript
+```typescript
+type CryptoData = {
+  name: string;
+  priceUsd: string;
+  timestamp: string;
+};
+```
+
+Here's an **Bitcoin** example:
+
+```typescript
 {
   name: 'Bitcoin',
   priceUsd: '33743.26',
