@@ -18,7 +18,7 @@ type CryptoData = {
 };
 ```
 
-Here's an **Bitcoin** example:
+Here's a **Bitcoin** example (`timestamp` is in UTC):
 
 ```typescript
 {
