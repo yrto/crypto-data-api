@@ -14,7 +14,7 @@ API made with **Node.js**, **Express** and **TypeScript** that fetches cryptocur
 
 # `crypto-data`
 
-This is the **main route**. It takes a cryptocurrency name as route parameters, fetches data from the **CoinCap API**, formats it, saves it to a Mongo database and sends the data back.
+This is the **main route**. It takes a cryptocurrency name as a route parameter, fetches data from the **CoinCap API**, formats it, saves it to a Mongo database and sends the data back.
 
 ### GET
 
