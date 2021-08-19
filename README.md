@@ -19,7 +19,7 @@ This is the **main route**. It takes a cryptocurrency name as route parameters, 
 ### GET
 
 ```
-localhost/v1/crypto-data/bitcoin
+http://localhost:3000/v1/crypto-data/bitcoin
 ```
 
 Here's a **RES** example for **Bitcoin** (timestamp is in UTC):
@@ -39,7 +39,7 @@ This is a **secondary route** that sends all previous requests as **RES**.
 ### GET
 
 ```
-localhost/v1/crypto-history
+http://localhost:3000/v1/crypto-history
 ```
 
 # **`scripts`**
