@@ -1,10 +1,11 @@
+import { Request, Response } from "express";
+
 import logger from "../services/logger";
 
 const errorTreatmentMiddleware = (
-  err: any,
-  req: any,
-  res: any,
-  next: any
+  err: Error,
+  req: Request,
+  res: Response
 ): void => {
   logger.error(err.message);
   res.status(500).send("Not ok!");

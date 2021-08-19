@@ -1,6 +1,8 @@
+import { Request, Response } from "express";
+
 // controller
 
-const health = (req: any, res: any): void => {
+const health = (req: Request, res: Response): void => {
   res.status(200).send("OK");
 };
 

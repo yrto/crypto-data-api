@@ -1,8 +1,14 @@
+import { Request, Response, NextFunction } from "express";
+
 import logger from "../services/logger";
 
 // log path of the requests
 
-const logPathMiddleware = (req: any, res: any, next: any): void => {
+const logPathMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void => {
   logger.info(req.path);
   next();
 };

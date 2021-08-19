@@ -1,10 +1,14 @@
+import { Request, Response, NextFunction } from "express";
 import fetchCryptoData from "../services/fetchCryptoData";
 import saveCryptoData from "../services/saveCryptoData";
-// import { CryptoData } from "../types/cryptoData";
 
 // controller
 
-const cryptoData = async (req: any, res: any, next: any): Promise<void> => {
+const cryptoData = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
   const cryptoName = req.params.cryptoName;
   try {
     const cryptoRes = await fetchCryptoData(cryptoName);
