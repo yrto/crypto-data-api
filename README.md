@@ -1,6 +1,6 @@
 # Fetch Crypto Data
 
-Small **Node.js** + **Express** + **TypeScript** API project that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a Mongo database. This project is using:
+API made with **Node.js**, **Express** and **TypeScript** that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a Mongo database. This project is using:
 
 ```
 - express
