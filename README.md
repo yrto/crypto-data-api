@@ -16,7 +16,7 @@ Small **Node.js** + **Express** + **TypeScript** API project that fetches crypto
 
 This is the **main route**. It takes a cryptocurrency name as route parameters, fetches data from the **CoinCap API**, formats it, saves it to a Mongo database and sends the data back.
 
-## GET
+### GET
 
 ```
 localhost/v1/crypto-data/bitcoin
@@ -36,7 +36,7 @@ Here's a **RES** example for **Bitcoin** (timestamp is in UTC):
 
 This is a **secondary route** that sends all previous requests as **RES**.
 
-## GET
+### GET
 
 ```
 localhost/v1/crypto-history
@@ -44,13 +44,13 @@ localhost/v1/crypto-history
 
 # **`scripts`**
 
-## npm run dev
+### npm run dev
 
 ```bash
 nodemon src/index.ts
 ```
 
-## npm start
+### npm start
 
 ```bash
 tsc && node build/index.js
