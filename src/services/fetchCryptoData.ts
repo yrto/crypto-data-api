@@ -1,11 +1,12 @@
+import { CRYPTO_API_URL } from "../config";
+import { CryptoData } from "../types/cryptoData";
 import axios from "axios";
 import formatUnixDate from "./formatUnixDate";
-import { CryptoData } from "./dataTypes";
 
-async function fetchCryptoData(name: string): Promise<CryptoData> {
+const fetchCryptoData = async (name: string): Promise<CryptoData> => {
   try {
     // fetch
-    const res = await axios.get(`https://api.coincap.io/v2/assets/${name}`);
+    const res = await axios.get(`${CRYPTO_API_URL}/${name}`);
     const cryptoDataRaw = res.data;
     // isolate
     const cryptoName = cryptoDataRaw.data.name;
@@ -24,6 +25,6 @@ async function fetchCryptoData(name: string): Promise<CryptoData> {
     // throw errors
     throw new Error(err);
   }
-}
+};
 
 export default fetchCryptoData;

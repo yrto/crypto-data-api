@@ -1,24 +1,28 @@
 # Fetch Crypto Data
 
-Small **Node.js** and **TypeScript** project that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a Mongo database. This project is using:
+Small **Node.js** + **Express** + **TypeScript** API project that fetches cryptocurrency data from the **[CoinCap API](https://docs.coincap.io/)** and saves it to a Mongo database. This project is using:
 
 ```
+- express
 - axios
 - moment
 - mongoose
+- nodemon
+- winston
+- dotenv
 ```
 
-**TypeScript** is set to use the custom `CryptoData` type:
+# `crypto-data`
 
-```typescript
-type CryptoData = {
-  name: string;
-  priceUsd: string;
-  timestamp: string;
-};
+This is the **main route**. It takes a cryptocurrency name as route parameters, fetches data from the **CoinCap API**, formats it, saves it to a Mongo database and sends the data back.
+
+## GET
+
+```
+localhost/v1/crypto-data/bitcoin
 ```
 
-Here's a **Bitcoin** example (`timestamp` is in UTC):
+Here's a **RES** example for **Bitcoin** (timestamp is in UTC):
 
 ```typescript
 {
@@ -28,7 +32,31 @@ Here's a **Bitcoin** example (`timestamp` is in UTC):
 }
 ```
 
-Local tests were made with a **Docker** instance of **MongoDB** using:
+# **`crypto-history`**
+
+This is a **secondary route** that sends all previous requests as **RES**.
+
+## GET
+
+```
+localhost/v1/crypto-history
+```
+
+# **`scripts`**
+
+## npm run dev
+
+```bash
+nodemon src/index.ts
+```
+
+## npm start
+
+```bash
+tsc && node build/index.js
+```
+
+# `Docker setup`
 
 ```bash
 docker run -d -p 27017:27017 mongo
